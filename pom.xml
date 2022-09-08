@@ -235,24 +235,18 @@
     </license>
   </licenses>
 
-  <repositories>
-    <repository>
-      <id>spring-snapshots</id>
-      <name>Spring Snapshots</name>
-      <url>https://repo.spring.io/snapshot</url>
-      <snapshots>
-        <enabled>true</enabled>
-      </snapshots>
-    </repository>
-    <repository>
-      <id>spring-milestones</id>
-      <name>Spring Milestones</name>
-      <url>https://repo.spring.io/milestone</url>
-      <snapshots>
-        <enabled>false</enabled>
-      </snapshots>
-    </repository>
-  </repositories>
+  <distributionManagement>
+		<repository>
+			<id>spring-release</id>
+			<name>spring-release</name>
+			<url>http://43.205.212.86:8081/repository/spring-release/</url>
+		</repository>
+		<snapshotRepository>
+			<id>spring-snapshot</id>
+			<name>spring-snapshot</name>
+			<url>http://43.205.212.86:8081/repository/spring-snapshot/</url>
+		</snapshotRepository>
+	</distributionManagement>
 
   <pluginRepositories>
     <pluginRepository>
