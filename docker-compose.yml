@@ -1,0 +1,7 @@
+version: '3.3'
+
+services:
+    web:
+      image: amol1996/spring-petclinic-test:latest
+      ports:
+         - "8080:8080"
