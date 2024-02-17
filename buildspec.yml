@@ -13,7 +13,7 @@ phases:
   post_build:
      commands:
         - echo "transfer the artifact..."
-        - aws s3 cp target/*.jar s3://codebuild-artifact-14/app.jar
+        - aws s3 cp target/*.jar s3://codebuild-demo-do16-1/app.jar
       # - command
 artifacts:
   files:
