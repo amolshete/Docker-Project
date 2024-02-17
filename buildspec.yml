@@ -1,0 +1,20 @@
+version: 0.2
+
+phases:
+  install:
+    commands:
+       - sudo apt-get update
+       - sudo apt-get install maven -y
+       - mvn --version
+  build:
+    commands:
+       - mvn clean install -Dskiptests
+      # - command
+  post_build:
+     commands:
+        - echo "transfer the artifact..."
+        - aws s3 cp target/*.jar s3://codebuild-artifact-14/app.jar
+      # - command
+artifacts:
+  files:
+     - '**/*'
