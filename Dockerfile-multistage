@@ -1,1 +1,8 @@
+FROM maven:latest AS build
+WORKDIR /usr/app
+COPY . /usr/app/
+RUN mvn install
+
+FROM 
+
 
