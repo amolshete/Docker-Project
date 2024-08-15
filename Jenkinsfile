@@ -13,5 +13,11 @@ pipeline {
                sh 'docker images'
             }
         }
+        stage('push the docker image') {
+            steps {
+               sh 'docker push amol1996/spring-petclinic-232823737:v1.2'
+               sh 'docker images'
+            }
+        }
     }
 }
