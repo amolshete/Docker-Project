@@ -9,7 +9,8 @@ pipeline {
         } 
         stage('Build the docker image') {
            steps {
-              sh 'docker build -t samikban/spring-petclinic-0601:v1.2'
+              sh 'docker build -t samikban/spring-petclinic-0601:v1.2. && docker images'
+              sh 'docker images'
             }
         }
     }
