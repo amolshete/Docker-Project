@@ -13,5 +13,11 @@ pipeline {
               sh 'docker images'
             }
         }
+        stage('push the docker image') {
+           steps {
+              sh 'docker push -d -p samikban/spring-petclinic-0601:v1.2. && docker images'
+              sh 'docker images'
+            }
+        }
     }
 }
