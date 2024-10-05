@@ -5,7 +5,7 @@ pipeline {
     stages {
         stage('Build') {
             steps {
-                def demoShared
+                demoShared()
                 // sh 'echo "mvn install"'
                // sh 'mvn install'
             }
