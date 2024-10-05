@@ -1,10 +1,12 @@
+@Library("shared-lib") _
 pipeline {
     agent any
 
     stages {
         stage('Build') {
             steps {
-                sh 'echo "mvn install"'
+                def demoShared
+                // sh 'echo "mvn install"'
                // sh 'mvn install'
             }
         }
