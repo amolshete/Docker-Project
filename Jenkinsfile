@@ -19,7 +19,7 @@ pipeline {
             steps {
                sh 'echo "docker push"'
                sh 'docker push amol1996/springpetclinic-123923498:v1.2'
-               sh 'docker rm amol1996/springpetclinic-123923498:v1.2'
+               sh 'docker rmi amol1996/springpetclinic-123923498:v1.2'
                sh 'docker images' 
             }
         }
