@@ -32,6 +32,12 @@ jobs:
             ls
             pwd
             ls -l target
-
+            
+      - name: Docker login
+        uses: docker/login-action@v3.3.0
+        with:
+          username: amol1996 
+          password: dsldfsldf
+        
       - name: docker build
         run: docker build amol1996/springpetclinic-githubaction:latest .
