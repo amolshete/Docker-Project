@@ -32,3 +32,6 @@ jobs:
             ls
             pwd
             ls -l target
+
+      - name: docker build
+        run: docker build amol1996/springpetclinic-githubaction:latest .
