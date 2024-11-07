@@ -41,3 +41,6 @@ jobs:
         
       - name: docker build
         run: docker build -t ${{ secrets.DOCKER_USERNAME }}/springpetclinic-githubaction:latest .
+
+      - name: Push the docker images
+        run: docker push ${{ secrets.DOCKER_USERNAME }}/springpetclinic-githubaction:latest
