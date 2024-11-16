@@ -9,14 +9,11 @@ phases:
   build:
     commands:
        - mvn clean install -Dskiptests
-       - docker build -t 905418014070.dkr.ecr.ap-south-1.amazonaws.com/wipro-demo-springpetclinic:latest .
-       - aws ecr get-login-password --region ap-south-1 | docker login --username AWS --password-stdin 905418014070.dkr.ecr.ap-south-1.amazonaws.com
-       - docker push 905418014070.dkr.ecr.ap-south-1.amazonaws.com/wipro-demo-springpetclinic:latest
       # - command
   post_build:
      commands:
         - echo "transfer the artifact..."
-        - aws s3 cp target/*.jar s3://demo-codebuild-artifact-905418014070/app.jar
+        - aws s3 cp target/*.jar s3://raghul-codebuild-demo/app.jar
       # - command
 artifacts:
   files:
